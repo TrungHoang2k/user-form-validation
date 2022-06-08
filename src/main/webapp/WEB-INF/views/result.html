@@ -6,11 +6,26 @@
 <body>
 <h1> Successfully </h1>
 <table>
-    <tr><input type="text" th:value="*{firstName}"/></tr>
-    <tr><input type="text" th:value="*{lastName}"/></tr>
-    <tr><input type="text" th:value="*{phoneNumber}"/></tr>
-    <tr><input type="text" th:value="*{age}"/></tr>
-    <tr><input type="text" th:value="*{email}"/></tr>
+    <tr>
+        <td>First name</td>
+        <td th:text="${userForm.firstName}"/></td>
+    </tr>
+    <tr>
+        <td>Last name</td>
+        <td th:text="${userForm.lastName}"/></td>
+    </tr>
+    <tr>
+        <td>Phone number</td>
+        <td th:text="${userForm.phoneNumber}"/></td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td th:text="${userForm.age}"/></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td th:text="${userForm.email}"/></td>
+    </tr>
 </table>
 </body>
 </html>

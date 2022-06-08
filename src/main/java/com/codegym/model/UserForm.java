@@ -95,12 +95,14 @@ public class UserForm implements Validator {
         }
 
         //validate age
-        if (age < 18) {
-            errors.rejectValue("age", "age.lowerThan18");
+        if (age != null) {
+            if (age < 18) {
+                errors.rejectValue("age", "age.lowerThan18");
+            }
         }
 
         //validate email
-        if (!phoneNumber.matches("(^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$)")){
+        if (!email.matches("(^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$)")){
             errors.rejectValue("email", "email.matches");
         }
     }
